@@ -1,0 +1,126 @@
+<!-- featureRequestForm.html consists of a simple form with all the required input fields. This page loads on routing to http://127.0.0.1:5000/-->
+<html>
+<!-- Head section consists of title of application and source script files knockoutjs and jquery-->
+
+<head>
+    <title>Feature App</title>
+    <script type="text/javascript" src="{{ url_for ('static', filename='knockout-3.4.2.js')}}"></script>
+    <script type="text/javascript" src="{{ url_for ('static', filename='jquery-3.3.1.js')}}"></script>
+    <link href="{{ url_for ('static', filename='css/bootstrap.min.css')}}" rel=stylesheet>
+    <script type="text/javascript" src="{{ url_for ('static', filename='js/bootstrap.min.js')}}"></script>
+
+    <style>
+        .navbar-default {
+            background-color: #DD4B39
+        }
+
+        .container {
+            min-height: 540px
+        }
+
+        code {
+            background-color: white
+        }
+
+        label {
+            text-align: left;
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- Header which consists of title and serach and Techmahindra Logo-->
+    <nav class="navbar  navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#" style="font-size:165%;color: white">Feature Request Application</a>
+            </div>
+            <form class="navbar-form navbar-right">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search" name="search">
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+                <img src="{{ url_for ('static', filename='images/logo.png')}}" class="img-rectangle img-pull-right">
+            </form>
+        </div>
+    </nav>
+
+    <div class="container" style="width:52%; margin-right: 26%;">
+        <div class="col-md-offset-2">
+            <h3 style="text-align: center;"><b>Feature Request Form</b></h3>
+        </div>
+        <br>
+        <!-- Form which contains Title, Description, Client, Client Priority, Target date and Product Area-->
+        <form class="form-horizontal" data-bind="submit: onSubmit">
+            <div class="form-group">
+                <label class="col-sm-3 control-label">Title<code>*</code></label>
+                <div class="col-sm-8">
+                    <input class="form-control" id="title" type="text" maxlength="100" data-bind='value: title, valueUpdate: "afterkeydown"'
+                        required />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label">Descripiton</label>
+                <div class="col-sm-8">
+                    <textarea class="form-control" id="descripiton" type="text" maxlength="1000" data-bind='value: description' /></textarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label">Client<code>*</code></label>
+                <div class="col-sm-8">
+                    <select class="form-control" id="client" data-bind="value: client" required>
+                            <option value="Client A">Client A</option>
+                            <option value="Client B">Client B</option>
+                            <option value="Client C">Client C</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label">Client Priority<code>*</code></label>
+                <div class="col-sm-8">
+                    <input class="form-control" id="clientPriority" type="number" min="1" pattern="[0-9]" data-bind='value: clientPriority, valueUpdate: "afterkeydown"'
+                        required />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label">Target Date</label>
+                <div class="col-sm-8">
+                    <input class="form-control" id="targetDate" type="date" max="2019-02-26" data-bind='value: targetDate, valueUpdate: "afterkeydown"'
+                    />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label">Product Area<code>*</code></label>
+                <div class="col-sm-8">
+                    <select class="form-control" id="productArea" data-bind="value: productArea" required>
+                            <option value="Policies">Policies</option>
+                            <option value="Billing">Billing</option>
+                            <option value="Claims">Claims</option>
+                            <option value="Reports">Reports</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-8 col-sm-offset-6">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+        </form>
+        <!-- Consist of source script for binding data in form and using ajax post it sends data to routes.py-->
+        <script type="text/javascript" src="{{ url_for ('static', filename='featureRequestFormBind.js')}}"></script>
+        <h3 style="margin-left: 38%">
+            <a href="{{ url_for('featureRequestDetails') }}" id="detailspage">List of Feature Requests</a>
+        </h3>
+    </div>
+<footer class="main-footer" padding>
+    <div class="pull-right hidden-xs">
+        Feature Request Application&nbsp;&nbsp;
+    </div>
+    <!-- Default to the left -->
+    <strong>&nbsp;&nbsp;Copyright &copy; 2018 <a href="#">Tech Mahindra</a>.</strong> All rights reserved.
+</footer>
+</body>
+
+
+</html>

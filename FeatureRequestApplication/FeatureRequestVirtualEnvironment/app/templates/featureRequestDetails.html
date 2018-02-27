@@ -1,0 +1,71 @@
+<!-- Details page consists of a table of Requests details -->
+<html>
+
+<head>
+    <title>Feature App</title>
+    <script type="text/javascript" src="{{ url_for ('static', filename='jquery-3.3.1.js')}}"></script>
+    <!-- Consists script for retrieving Feature Request Details from RestFul Web Service -->
+    <script type="text/javascript" src="{{ url_for ('static', filename='getFeatureRequestDetails.js')}}"></script>
+    <link href="{{ url_for ('static', filename='css/bootstrap.min.css')}}" rel=stylesheet>
+    <script type="text/javascript" src="{{ url_for ('static', filename='js/bootstrap.min.js')}}"></script>
+    <link href="{{ url_for ('static', filename='css/jquery.dataTables.min.css')}}" rel=stylesheet>
+    <script type="text/javascript" src="{{ url_for ('static', filename='js/jquery.dataTables.min.js')}}"></script>
+    <!-- header background color-->
+    <style>
+        .navbar-default {
+            background-color: #DD4B39
+        }
+    </style>
+</head>
+
+
+<body>
+    <!-- Form which contains Title, Description, Client, Client Priority, Target date and Product Area-->
+    <nav class="navbar  navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#" style="font-size:165%;color: white">Feature Request Application</a>
+            </div>
+            <form class="navbar-form navbar-right">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search" name="search">
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+                <img src="{{ url_for ('static', filename='images/logo.png')}}" class="img-rectangle img-pull-right">
+            </form>
+        </div>
+    </nav>
+    <h2 style="text-align: center;"><b>Request Details</b></h2>
+    <br>
+    <div class="container" style="width:70%;">
+        <div class="table-responsive">
+            <!-- Table to view Feature Request Details -->
+            <table class="table table-bordered" id="FeatureRequest_table" style="height:50%;">
+                <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Client</th>
+                    <th>ClientPriority</th>
+                    <th>TargetDate</th>
+                    <th>ProductArea</th>
+                </tr>
+                </thead>
+            </table>
+        </div>
+      
+    <h3 style="margin-left: 40%">
+        <a href="{{ url_for('featureRequestForm') }}">Add New Feature Request</a>
+    </h3>
+    </div>
+    <!-- Reference Link for Adding A New Feature Request-->
+    <footer class="main-footer" padding>
+        <div class="pull-right hidden-xs">
+            Feature Request Application&nbsp;&nbsp;
+        </div>
+        <!-- Default to the left -->
+        <strong>&nbsp;&nbsp;Copyright &copy; 2017-18 <a href="#">Tech Mahindra</a>.</strong> All rights reserved.
+    </footer>
+</body>
+
+</html>
