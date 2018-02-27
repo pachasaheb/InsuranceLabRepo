@@ -2,21 +2,19 @@
 For Proof Of Concept, built a project 'Feature Request Application' with python,flask,sqlalchemy and knockoutjs.
 
 # Feature Request Application:
-	Feature Request Application is built with Python and Flask which is a web
-    application framework written in Python. It consist of feature request form
-    page where a user can fill in a feature request, html values binding using
-    KnockoutJS , using SqlAlchemy ORM details are persisted in database and 
-    feature request details page where a user can see feature request list 
-    in the form of atable. 
+	Feature Request Application is built with Python and Flask which is a web application framework written in Python. It
+	consist of feature request form page where a user can fill in a feature request, html values binding usingKnockoutJS,
+	using SqlAlchemy ORM details are persisted in database and feature request details page where a user can see feature 
+	request list in the form of atable. 
     
 # Getting Started:
 	Pre-requisites: Project is built and validated using the following software
-	* Python (v.3.6.4), 
-	* PostgreSql database(v.10.1)
-	* Browsers: Chrome(v.64.) and Firefox(v.55+)
-	Note: If any other database has to be used please change the connection 
-    string in Config.py and also change system paths for test cases.
-    Please Refer to TechStack Requirements for further specifications below.
+		* Python (v.3.6.4), 
+		* PostgreSql database(v.10.1)
+		* Browsers: Chrome(v.64.) and Firefox(v.55+)
+	Note: If any other database has to be used please change the connection string in Config.py and also change system paths 
+	for test cases.
+    	* Please Refer to TechStack Requirements for further specifications below.
     
 # TODO:
 	* Building Project and Deploying In Cloud
@@ -26,109 +24,92 @@ For Proof Of Concept, built a project 'Feature Request Application' with python,
 	* Path corrections in test cases (test_Cases_App.py)
 
 # Installation:
-	1.	Open GitHub link and download the project folder.
-	2.	Open command prompt in project folder “FeatureRequestApplication\FeatrueRequest VirtualEnivronment\Scripts” and type ‘activate’. This will activate the ‘FeatrueRequestVirtualEnivronmentironment’.
+	1.Open GitHub link and download the project folder.
+	2.Open command prompt in project folder “FeatureRequestApplication\FeatrueRequest VirtualEnivronment\Scripts” and type
+	‘activate’. This will activate the ‘FeatrueRequestVirtualEnivronmentironment’.
 
-		**.. \Feature Request Application\FeatrueRequestVirtualEnivronment\Scripts>activate
-		**(FeatrueRequestVirtualEnivronment)..\FeatureRequestApplication\FeatrueRequestVirtualEnivronment\Scripts>
+	**.. \Feature Request Application\FeatrueRequestVirtualEnivronment\Scripts>activate
+	**(FeatrueRequestVirtualEnivronment)..\FeatureRequestApplication\FeatrueRequestVirtualEnivronment\Scripts>
 		
-	3.	Then install required packages present in requirements.txt by executing command ‘pip install –r requirements.txt’ OR can run command ‘pip install  package-name’
-		**(FeatrueRequestVirtualEnivronment)..FeatureRequestApplication\FeatrueRequestVirtualEnivronment\Scripts> pip install –r requirements.txt
-	4.	Set Flask_APP variable by using command ‘set FLASK_APP=FeatureRequestApplication.py’
+	3.Then install required packages present in requirements.txt by executing command ‘pip install –r requirements.txt’ OR
+	can run command ‘pip install  package-name’
+	**(FeatrueRequestVirtualEnivronment)..FeatureRequestApplication\FeatrueRequestVirtualEnivronment\Scripts> pip install –r 		requirements.txt
+	4.Set Flask_APP variable by using command ‘set FLASK_APP=FeatureRequestApplication.py’
 	
-		**(FeatrueRequestVirtualEnivronment)..FeatureRequestApplication\FeatrueRequestVirtualEnivronment\Scripts>set FLASK_APP=FeatureRequestApplication.py
+	**(FeatrueRequestVirtualEnivronment)..FeatureRequestApplication\FeatrueRequestVirtualEnivronment\Scripts>set FLASK_APP=FeatureRequestApplication.py
         
-	5.	Type ‘flask run’ and navigate to ‘http://127.0.0.1:5000/’ you can see Feature Request App form
-		**(FeatrueRequestVirtualEnivronment)..\FeatureRequestApplication\FeatrueRequestVirtualEnivronment>flask run
+	5.Type ‘flask run’ and navigate to ‘http://127.0.0.1:5000/’ you can see Feature Request App form
+	
+	**(FeatrueRequestVirtualEnivronment)..\FeatureRequestApplication\FeatrueRequestVirtualEnivronment>flask run
  							* Serving Flask app "FeatureRequestApplication"
  							* Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
  						
  # Feature Request Application Form Page:
- 	Open chrome/Mozilla and navigate to url ‘http://127.0.0.1:5000/’ where list 
-    of fields are present for customer to fill in are as follows:
-	1.	Title: A short, descriptive name of the feature request.
-			•Title [String type] Length-100 characters (Will stop user further 
-             entering 100 by using html input ‘maxlength’ attribute).
-			•Title is unique field (Same titles cannot be entered for different
-             clients).
-			•Title is Mandatory field (Input validation is done by html attribute
-             ‘required’).
-	2.	Description: A long description of the feature request.
-			•Description [String type] Length- 1000 characters (Will stop user
-             further entering 1000 by using html input ‘maxlength’ attribute).
-			•Description uses ‘text-area’ html input attribute which can be auto
-             align as required by user.
-			•Description filed is not mandatory.
-	3.	Client: A selection list of clients (use "Client A", "Client B", 
-		"Client C")
-		•Client [String type] will display list with three options "Client A",
-        "Client B", "Client C" (using html  ‘select’ and ‘options’ type 
-        attributes) and user can select any one of client.
+ 	Open chrome/Mozilla and navigate to url ‘http://127.0.0.1:5000/’ where list of fields are present for customer to fill
+	in are as follows:
+	1.Title: A short, descriptive name of the feature request.
+		•Title [String type] Length-100 characters (Will stop user further entering 100 by using html input ‘maxlength’
+		 attribute).
+		•Title is unique field (Same titles cannot be entered for different clients).
+		•Title is Mandatory field (Input validation is done by html attribute ‘required’).
+	2.Description: A long description of the feature request.
+		•Description [String type] Length- 1000 characters (Will stop user further entering 1000 by using html input 
+		‘maxlength’ attribute).
+		•Description uses ‘text-area’ html input attribute which can be auto align as required by user.
+		•Description filed is not mandatory.
+	3.Client: A selection list of clients (use "Client A", "Client B", "Client C")
+		•Client [String type] will display list with three options "Client A","Client B", "Client C" (using html  
+		‘select’ and ‘options’ type attributes) and user can select any one of client.
 		•Client field is also mandatory
-	4.	Client Priority: A numbered priority according to the client (1...n).
-		Client Priority numbers should not repeat for the given client, so if a
-        priority is set on a new feature as "1", then all other feature requests 
-        for that client should be reordered.
-		•Client Priority [Integer Type]-User can only enter numbers (Will stop 
-         user entering String values, by using html input type as ‘number’).
+	4.Client Priority: A numbered priority according to the client (1...n).Client Priority numbers should not repeat for the 
+	given client, so if a priority is set on a new feature as "1", then all other feature requests for that client should be 
+	reordered.
+		•Client Priority [Integer Type]-User can only enter numbers (Will stop user entering String values, by using 
+		html input type as ‘number’).
 		•Client Priority is mandatory field.
 		•User cannot enter any negative values.
-		•Client Priority will not be same for two features with respect to a 
-        single client as Client Priority will be re-ordered.
-	5.	Target Date: The date that the client is hoping to have the feature.
-		•Target Date [Date type] field displays a calendar (User can select date
-        in the calendar).
+		•Client Priority will not be same for two features with respect to a single client as Client Priority will be 
+		re-ordered.
+	5.Target Date: The date that the client is hoping to have the feature.
+		•Target Date [Date type] field displays a calendar (User can select date in the calendar).
 		•User can only select feature dates and past dates cannot be selected.
 		•Target Date is a mandatory field.
-	6.	Product Area: A selection list of product areas (use 'Policies', 
-		'Billing', 'Claims', 'Reports')
-		•Product Area [String Type] field display list of four options 'Policies'
-         , 'Billing', 'Claims', 'Reports' (using html  ‘select’ and ‘options’ 
-         type attributes) and user can select any one of Product Area.
+	6.Product Area: A selection list of product areas (use 'Policies', 'Billing', 'Claims', 'Reports')
+		•Product Area [String Type] field display list of four options 'Policies', 'Billing', 'Claims', 'Reports' (using 
+		html ‘select’ and ‘options’ type attributes) and user can select any one of Product Area.
 		•Product Area is a mandatory field.
-    At the End of page a reference link for 'List of Feature Requests' is present 
-    to navigate to FeatureRequestDetails Page
+    	At the End of page a reference link for 'List of Feature Requests' is present to navigate to FeatureRequestDetails Page.
         
 # Feature Request Application Details Page:
-	Entering all values and on clicking ‘Submit’ it will navigate to details 
-    page at url ‘http://127.0.0.1:5000/FeatureRequestDeatils’ where all the 
-    feature request details are reflected in a table[built with jQuery data 
-    Table] which will have Sorting and Searching.
+	Entering all values and on clicking ‘Submit’ it will navigate to details page at url ‘http://127.0.0.1:5000
+	/FeatureRequestDeatils’ where all the feature request details are reflected in a table [built with jQuery data Table]
+	which will have Sorting and Searching.
 	
 # Tech Stack Requirements:
-	The following are requirements on the tech stack. This stack demonstrates 
-    mastery of tools our team favors.
+	The following are requirements on the tech stack. This stack demonstrates mastery of tools our team favors.
 	•OS: Windows/Linux
 	•Server Side Scripting: Python (3.6.4)
 	•Server Framework: Flask (0.12.2)
-	•SqlAlchemy (1.2.2): For Reprioritizing the client priority and Persisting
-     details we can choose following options of which SQL ORM has been preferred
-     which is explained below
-	*Create, Read, Update, and Delete using the SQL Object Relational Mapping:
-				•SQLAlchemy's full Object Relational Mapping (ORM) capabilities 
-                which allows one to think in terms of Python classes and objects
-                instead of database tables and connections.
-				•We can insert data into our database by instantiating Python 
-                objects and passing them and also Sessions usage is preferable.
-	*Create, Read, Update, and Delete using the SQL Bulk Update:
-				•The basic purpose for bulk insert is to allow for keys/
-                constraints to be suspended while a large amount of data
-                is imported, which would be much quicker than a conventional
-                record-by-record/programmatic
-	*Create, Read, Update, and Delete using the Raw SQL and Stored Procedures:
-				•The strings are long, and we'd have issues if we needed to 
-                insert double or single quotation marks in any of the fields,
-                as we are already using both (double for the Python strings and
-                single for the SQL strings).
-				•This code would become even messier if we were to start using
-                dynamic values, if we needed to run more complicated queries, 
-                or if we were dealing with anything more complicated than our 
-                single-table toy database.
-	•JavaScript: KnockoutJS (3.4.2): Knockout is a JavaScript library that which
-     gives a simplified and dynamic Model-View-View Model binding pattern for all
-     the UI elements in HTML.
-	•Testing: Unittest2 (1.1.0): Using Unittest in python test cases have been
-     written to test positive and negative workflow of code. 
+	•SqlAlchemy (1.2.2): For Reprioritizing the client priority and Persistingdetails we can choose following options of
+	 which SQL ORM has been preferred which is explained below
+		*Create, Read, Update, and Delete using the SQL Object Relational Mapping:
+			•SQLAlchemy's full Object Relational Mapping (ORM) capabilities which allows one to think in terms of 
+			Python classes and objects instead of database tables and connections.
+			•We can insert data into our database by instantiating Python objects and passing them and also Sessions 
+			usage is preferable.
+		*Create, Read, Update, and Delete using the SQL Bulk Update:
+			•The basic purpose for bulk insert is to allow for keys/constraints to be suspended while a large amount
+			of data is imported, which would be much quicker than a conventionalrecord-by-record/programmatic
+		*Create, Read, Update, and Delete using the Raw SQL and Stored Procedures:
+			•The strings are long, and we'd have issues if we needed to insert double or single quotation marks in
+			any of the fields,as we are already using both (double for the Python strings and single for the SQL
+			strings).
+			•This code would become even messier if we were to start using dynamic values, if we needed to run more
+			complicated queries, or if we were dealing with anything more complicated than our single-tabledatabase.
+	•JavaScript: KnockoutJS (3.4.2): Knockout is a JavaScript library that which gives a simplified and dynamic Model-View-
+	 View Model binding pattern for all the UI elements in HTML.
+	•Testing: Unittest2 (1.1.0): Using Unittest in python test cases have been written to test positive and negative 
+	 workflow of code. 
 
 
                 
