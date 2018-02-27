@@ -14,7 +14,7 @@ For Proof Of Concept, built a project 'Feature Request Application' with python,
 		* Browsers: Chrome(v.64.) and Firefox(v.55+)
 	Note: If any other database has to be used please change the connection string in Config.py and also change system paths 
 	for test cases.
-    	* Please Refer to TechStack Requirements for further specifications below.
+    	* Please Refer to Stack/Application Details for further specifications below.
     
 # TODO:
 	* Building Project and Deploying In Cloud
@@ -42,8 +42,8 @@ For Proof Of Concept, built a project 'Feature Request Application' with python,
 	
 	**(FeatrueRequestVirtualEnivronment)..\FeatureRequestApplication\FeatrueRequestVirtualEnivronment>flask run
  							* Serving Flask app "FeatureRequestApplication"
- 							* Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
- 						
+							* Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ 					
  # Feature Request Application Form Page:
  	Open chrome/Mozilla and navigate to url ‘http://127.0.0.1:5000/’ where list of fields are present for customer to fill
 	in are as follows:
@@ -78,34 +78,27 @@ For Proof Of Concept, built a project 'Feature Request Application' with python,
 		•Product Area [String Type] field display list of four options 'Policies', 'Billing', 'Claims', 'Reports' (using 
 		html ‘select’ and ‘options’ type attributes) and user can select any one of Product Area.
 		•Product Area is a mandatory field.
-    	At the End of page a reference link for 'List of Feature Requests' is present to navigate to FeatureRequestDetails Page.
+    	At the End of page a reference link for 'List of Feature Requests' is present to navigate to FeatureRequestDetails Page
         
 # Feature Request Application Details Page:
 	Entering all values and on clicking ‘Submit’ it will navigate to details page at url ‘http://127.0.0.1:5000
 	/FeatureRequestDeatils’ where all the feature request details are reflected in a table [built with jQuery data Table]
 	which will have Sorting and Searching.
 	
-# Tech Stack Requirements:
+# Stack/Application Details:
 	The following are requirements on the tech stack. This stack demonstrates mastery of tools our team favors.
 	•OS: Windows/Linux
 	•Server Side Scripting: Python (3.6.4)
 	•Server Framework: Flask (0.12.2)
-	•SqlAlchemy (1.2.2): For Reprioritizing the client priority and Persistingdetails we can choose following options of
-	 which SQL ORM has been preferred which is explained below
-		*Create, Read, Update, and Delete using the SQL Object Relational Mapping:
-			•SQLAlchemy's full Object Relational Mapping (ORM) capabilities which allows one to think in terms of 
-			Python classes and objects instead of database tables and connections.
-			•We can insert data into our database by instantiating Python objects and passing them and also Sessions 
-			usage is preferable.
-		*Create, Read, Update, and Delete using the SQL Bulk Update:
-			•The basic purpose for bulk insert is to allow for keys/constraints to be suspended while a large amount
-			of data is imported, which would be much quicker than a conventionalrecord-by-record/programmatic
-		*Create, Read, Update, and Delete using the Raw SQL and Stored Procedures:
-			•The strings are long, and we'd have issues if we needed to insert double or single quotation marks in
-			any of the fields,as we are already using both (double for the Python strings and single for the SQL
-			strings).
-			•This code would become even messier if we were to start using dynamic values, if we needed to run more
-			complicated queries, or if we were dealing with anything more complicated than our single-tabledatabase.
+	•SqlAlchemy (1.2.2): Solution Options for Reprioritization
+		1.SQL ORM: This has been implemented-ORM tools provide an object oriented query language. This allows application
+		developers to focus on the object model and not to have to be concerned with the database structure or SQL semantics.
+		The ORM tool itself will translate the query language into the appropriate syntax for the database.
+		2.Using Stored Procedure: Stored procedures are compiled once and stored in executable form, so procedure calls are quick
+		and efficient. Executable code is automatically cached and shared among users. This lowers memory requirements and
+		invocation overhead.
+		3.Bulk Update: A feature which will record all the changes and will update in bulk which will reduce the detours to
+		 /from database.
 	•JavaScript: KnockoutJS (3.4.2): Knockout is a JavaScript library that which gives a simplified and dynamic Model-View-
 	 View Model binding pattern for all the UI elements in HTML.
 	•Testing: Unittest2 (1.1.0): Using Unittest in python test cases have been written to test positive and negative 
