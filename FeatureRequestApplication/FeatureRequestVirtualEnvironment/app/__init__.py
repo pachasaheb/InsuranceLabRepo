@@ -67,6 +67,8 @@ except Exception as e:
     print('Exception occured in init',e)
 
 
+if __name__ == "__main__":
+    app.run()
 
 
 
