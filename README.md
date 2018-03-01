@@ -1,11 +1,11 @@
 # InsuranceLabRepo
-For Proof Of Concept, built a project 'Feature Request Application' with python,flask,sqlalchemy and knockoutjs.
+For Proof Of Concept, built a project 'Feature Request Application' with python, flask, sqlalchemy and knockoutjs.
 
 # Feature Request Application:
 	Feature Request Application is built with Python and Flask which is a web application framework written in Python. It
-	consist of feature request form page where a user can fill in a feature request, html values binding usingKnockoutJS,
+	consist of feature request form page where a user can fill in a feature request, html values are binded using KnockoutJS,
 	using SqlAlchemy ORM details are persisted in database and feature request details page where a user can see feature 
-	request list in the form of atable. 
+	request list in the form of a table. 
     
 # Getting Started:
 	Pre-requisites: Project is built and validated using the following software
@@ -25,22 +25,22 @@ For Proof Of Concept, built a project 'Feature Request Application' with python,
 
 # Installation:
 	1.Open GitHub link and download the project folder.
-	2.Open command prompt in project folder “FeatureRequestApplication\FeatrueRequest VirtualEnivronment\Scripts” and type
-	‘activate’. This will activate the ‘FeatrueRequestVirtualEnivronmentironment’.
+	2.Open command prompt in project folder “FeatureRequestApplication\FeatureRequestVirtualEnvironment\Scripts” and type
+	‘activate’. This will activate the ‘FeatureRequestVirtualEnvironment’.
 
-	**.. \Feature Request Application\FeatrueRequestVirtualEnivronment\Scripts>activate
-	**(FeatrueRequestVirtualEnivronment)..\FeatureRequestApplication\FeatrueRequestVirtualEnivronment\Scripts>
+	**.. \Feature Request Application\FeatureRequestVirtualEnvironment\Scripts>activate
+	**(FeatureRequestVirtualEnvironment)..\FeatureRequestApplication\FeatureRequestVirtualEnvironment\Scripts>
 		
 	3.Then install required packages present in requirements.txt by executing command ‘pip install –r requirements.txt’ OR
 	can run command ‘pip install  package-name’
-	**(FeatrueRequestVirtualEnivronment)..FeatureRequestApplication\FeatrueRequestVirtualEnivronment\Scripts> pip install –r 		requirements.txt
+	**(FeatureRequestVirtualEnvironment)..FeatureRequestApplication\FeatureRequestVirtualEnvironment\Scripts> pip install –r 		requirements.txt
 	4.Set Flask_APP variable by using command ‘set FLASK_APP=FeatureRequestApplication.py’
 	
-	**(FeatrueRequestVirtualEnivronment)..FeatureRequestApplication\FeatrueRequestVirtualEnivronment\Scripts>set FLASK_APP=FeatureRequestApplication.py
+	**(FeatureRequestVirtualEnvironment)..FeatureRequestApplication\FeatureRequestVirtualEnvironment\Scripts>set FLASK_APP=FeatureRequestApplication.py
         
 	5.Type ‘flask run’ and navigate to ‘http://127.0.0.1:5000/’ you can see Feature Request App form
 	
-	**(FeatrueRequestVirtualEnivronment)..\FeatureRequestApplication\FeatrueRequestVirtualEnivronment>flask run
+	**(FeatureRequestVirtualEnvironment)..\FeatureRequestApplication\FeatureRequestVirtualEnvironment>flask run
  							* Serving Flask app "FeatureRequestApplication"
 							* Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
  					
@@ -59,7 +59,7 @@ For Proof Of Concept, built a project 'Feature Request Application' with python,
 		•Description filed is not mandatory.
 	3.Client: A selection list of clients (use "Client A", "Client B", "Client C")
 		•Client [String type] will display list with three options "Client A","Client B", "Client C" (using html  
-		‘select’ and ‘options’ type attributes) and user can select any one of client.
+		‘select’ and ‘options’ type attributes) and user can select any one of the clients.
 		•Client field is also mandatory
 	4.Client Priority: A numbered priority according to the client (1...n).Client Priority numbers should not repeat for the 
 	given client, so if a priority is set on a new feature as "1", then all other feature requests for that client should be 
@@ -72,7 +72,7 @@ For Proof Of Concept, built a project 'Feature Request Application' with python,
 		re-ordered.
 	5.Target Date: The date that the client is hoping to have the feature.
 		•Target Date [Date type] field displays a calendar (User can select date in the calendar).
-		•User can only select feature dates and past dates cannot be selected.
+		•User can only select future dates and past dates cannot be selected.
 		•Target Date is a mandatory field.
 	6.Product Area: A selection list of product areas (use 'Policies', 'Billing', 'Claims', 'Reports')
 		•Product Area [String Type] field display list of four options 'Policies', 'Billing', 'Claims', 'Reports' (using 
