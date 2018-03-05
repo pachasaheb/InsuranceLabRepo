@@ -75,8 +75,7 @@ class FeatureRequestService:
         try:
             # dbsession variable gets session from class function getSession()
             dbsession=self.getSession()
-            print("inside rretri service")
-            print("AfeatureRequestApper get session")
+            print("inside retrieve Feature Request Service")
             # Stores the database objects into details according to the query should retrieve all records present in database according to ascending order of client priority and client
             details=dbsession.query(FeatureRequestApp).order_by(asc(FeatureRequestApp.client),asc(FeatureRequestApp.clientPriority)).all()
             # declaring an empty array
