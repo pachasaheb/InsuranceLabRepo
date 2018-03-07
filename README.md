@@ -57,8 +57,8 @@ For Proof Of Concept, built a project 'Feature Request Application' with python,
 		•Description uses ‘text-area’ html input attribute which can be auto align as required by user.
 		•Description filed is not mandatory.
 	3.Client: A selection list of clients (use "Client A", "Client B", "Client C")
-		•Client [String type] will display list with three options "Client A","Client B", "Client C" (using html  
-		‘select’ and ‘options’ type attributes) and user can select any one of the clients.
+		•Client [String type] will display list with three options "Client A","Client B", "Client C"
+		(using html ‘select’ and ‘options’ type attributes) and user can select any one of the clients.
 		•Client field is also mandatory
 	4.Client Priority: A numbered priority according to the client (1...n).Client Priority numbers should not
 	repeat for the given client, so if a priority is set on a new feature as "1", then all other feature requests 
@@ -75,14 +75,16 @@ For Proof Of Concept, built a project 'Feature Request Application' with python,
 		•Target Date is a mandatory field.
 	6.Product Area: A selection list of product areas (use 'Policies', 'Billing', 'Claims', 'Reports')
 		•Product Area [String Type] field display list of four options 'Policies', 'Billing', 'Claims', 
-		'Reports' (using html ‘select’ and ‘options’ type attributes) and user can select any one of Product Area.
+		'Reports' (using html ‘select’ and ‘options’ type attributes) and user can select any 
+		one of Product Area.
 		•Product Area is a mandatory field.
-    	At the End of page a reference link for 'List of Feature Requests' is present to navigate to FeatureRequestDetails Page
+    	At the End of page a reference link for 'List of Feature Requests' is present to navigate to
+	FeatureRequestDetails Page
         
 # Feature Request Application Details Page:
 	Entering all values and on clicking ‘Submit’ it will navigate to details page at url ‘http://127.0.0.1:5000
-	/FeatureRequestDeatils’ where all the feature request details are reflected in a table [built with jQuery data Table]
-	which will have Sorting and Searching.
+	/FeatureRequestDeatils’ where all the feature request details are reflected in a table [built with jQuery 
+	data Table] which will have Sorting and Searching.
 # Feature Request Application Update:
 	By clicking on title in table in Feature Request Application Details Page a boostrap modal will appear
 	with respective Feature Request Details which can be edited and on clicking 'Update' button Feature Request
