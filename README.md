@@ -17,10 +17,9 @@ For Proof Of Concept, built a project 'Feature Request Application' with python,
     	* Please Refer to Stack/Application Details for further specifications below.
     
 # TODO:
-	* Building Project and Deploying In Cloud
+	* Building Project and Deploying In Cloud[MS AZURE]
 	* Still have some boiler plate code that can be avoided using KnockoutJS-
 	  featureRequestFormBind.js for better binding.
-	* Edit Feature request refactoring Work in progress.
 	* Path corrections in test cases (test_Cases_App.py)
 
 # Installation:
