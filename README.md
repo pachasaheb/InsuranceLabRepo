@@ -61,10 +61,10 @@ For Proof Of Concept, built a project 'Feature Request Application' with python,
 		(using html ‘select’ and ‘options’ type attributes) and user can select any one of the clients.
 		•Client field is also mandatory
 	4.Client Priority: A numbered priority according to the client (1...n).Client Priority numbers should not
-	repeat for the given client, so if a priority is set on a new feature as "1", then all other feature requests 
-	for that client should be reordered.
-		•Client Priority [Integer Type]-User can only enter numbers (Will stop user entering String values, by
-		using html input type as ‘number’).
+	repeat for the given client, so if a priority is set on a new feature as "1", then all other feature 
+	requests for that client should be reordered.
+		•Client Priority [Integer Type]-User can only enter numbers (Will stop user entering String values,
+		by using html input type as ‘number’).
 		•Client Priority is mandatory field.
 		•User cannot enter any negative values.
 		•Client Priority will not be same for two features with respect to a single client as Client Priority 
