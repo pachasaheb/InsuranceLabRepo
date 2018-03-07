@@ -4,6 +4,7 @@
 <head>
     <title>Feature App</title>
     <script type="text/javascript" src="{{ url_for ('static', filename='jquery-3.3.1.js')}}"></script>
+    <script type="text/javascript" src="{{ url_for ('static', filename='knockout-3.4.2.js')}}"></script>
     <!-- Consists script for retrieving Feature Request Details from RestFul Web Service -->
     <script type="text/javascript" src="{{ url_for ('static', filename='getFeatureRequestDetails.js')}}"></script>
     <link href="{{ url_for ('static', filename='css/bootstrap.min.css')}}" rel=stylesheet>
@@ -37,23 +38,23 @@
     </nav>
     <h2 style="text-align: center;"><b>Request Details</b></h2>
     <br>
-    <div class="container" style="width:70%;">
-        <div class="table-responsive">
+    <div class="container" style="width:80%;">
+        <div class="table table-responsive">
             <!-- Table to view Feature Request Details -->
-            <table class="table table-bordered" id="FeatureRequest_table" style="height:50%;">
+            <table class="table table-bordered" id="FeatureRequest_table">
                 <thead>
-                <tr>
-                    <th>Title</th>
-                    <th>Description</th>
-                    <th>Client</th>
-                    <th>ClientPriority</th>
-                    <th>TargetDate</th>
-                    <th>ProductArea</th>
-                </tr>
+                    <tr>
+                        <th>Title</th>
+                        <th>Description</th>
+                        <th>Client</th>
+                        <th>ClientPriority</th>
+                        <th>TargetDate</th>
+                        <th>ProductArea</th>
+                    </tr>
                 </thead>
             </table>
-        </div>
-      
+    </div>
+
     <h3 style="margin-left: 40%">
         <a href="{{ url_for('featureRequestForm') }}">Add New Feature Request</a>
     </h3>
@@ -66,6 +67,75 @@
         <!-- Default to the left -->
         <strong>&nbsp;&nbsp;Copyright &copy; 2018 <a href="#">Tech Mahindra</a>.</strong> All rights reserved.
     </footer>
+
+    <!-- Update Modal  consits of form with all the input fields and validations and used to edit the feature request details-->
+    <div id="UpdateModal" class="modal fade" role="dialog" data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" id="modal-close">&times;</button>
+                    <h4 class="modal-title"><b>Edit Form</b></h4>
+                </div>
+                <br>
+                <form class="form-horizontal" data-bind="submit: onUpdate" >
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">Title<code>*</code></label>
+                        <div class="col-sm-8">
+                            <input class="form-control" id="title" type="text" maxlength="100" data-bind='value: title, valueUpdate: "afterkeydown"'
+                              disabled  required />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">Descripiton</label>
+                        <div class="col-sm-8">
+                            <textarea class="form-control" id="descripiton" type="text" maxlength="1000" data-bind='value: description' /></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">Client<code>*</code></label>
+                        <div class="col-sm-8">
+                            <select class="form-control" id="client" data-bind="value: client" required>
+                            <option value="Client A">Client A</option>
+                            <option value="Client B">Client B</option>
+                            <option value="Client C">Client C</option>
+                    </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">Client Priority<code>*</code></label>
+                        <div class="col-sm-8">
+                            <input class="form-control" id="clientPriority" type="number" min="1" pattern="[0-9]" data-bind='value: clientPriority, valueUpdate: "afterkeydown"'
+                                required />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">Target Date</label>
+                        <div class="col-sm-8">
+                            <input class="form-control" id="targetDate" type="text" max="2019-02-26" data-bind='value: targetDate, valueUpdate: "afterkeydown"'
+                            />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">Product Area<code>*</code></label>
+                        <div class="col-sm-8">
+                            <select class="form-control" id="productArea" data-bind="value: productArea" required>
+                            <option value="Policies">Policies</option>
+                            <option value="Billing">Billing</option>
+                            <option value="Claims">Claims</option>
+                            <option value="Reports">Reports</option>
+                    </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-8 col-sm-offset-6">
+                            <button type="submit" class="btn btn-primary">Update</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
