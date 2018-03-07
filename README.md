@@ -67,8 +67,8 @@ For Proof Of Concept, built a project 'Feature Request Application' with python,
 		by using html input type as ‘number’).
 		•Client Priority is mandatory field.
 		•User cannot enter any negative values.
-		•Client Priority will not be same for two features with respect to a single client as Client Priority 
-		will be re-ordered.
+		•Client Priority will not be same for two features with respect to a single client as Client 
+		Priority will be re-ordered.
 	5.Target Date: The date that the client is hoping to have the feature.
 		•Target Date [Date type] field displays a calendar (User can select date in the calendar).
 		•User can only select future dates and past dates cannot be selected.
@@ -78,8 +78,8 @@ For Proof Of Concept, built a project 'Feature Request Application' with python,
 		'Reports' (using html ‘select’ and ‘options’ type attributes) and user can select any 
 		one of Product Area.
 		•Product Area is a mandatory field.
-    	At the End of page a reference link for 'List of Feature Requests' is present to navigate to
-	FeatureRequestDetails Page
+    	At the End of page a reference link for 'List of Feature Requests' is present to navigate to Feature
+	Request Details Page
         
 # Feature Request Application Details Page:
 	Entering all values and on clicking ‘Submit’ it will navigate to details page at url ‘http://127.0.0.1:5000
